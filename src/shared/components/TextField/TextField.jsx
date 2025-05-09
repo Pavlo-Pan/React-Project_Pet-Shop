@@ -1,0 +1,42 @@
+import { useId } from 'react';
+import css from './TextField.module.css';
+
+const TextField = ({
+    label,
+    name,
+    register,
+    rules,
+    error,
+    as = 'input',
+    styles: inputStyles = {},
+    ...props
+}) => {
+    const id = useId();
+
+    const commonProps = {
+        id,
+        ...register(name, rules),
+        ...props,
+        className: css.input,
+        style: inputStyles,
+    };
+
+    return (
+        <div className={css.wrapper}>
+            {label && (
+                <label htmlFor={id} className={css.label}>
+                    {label}
+                </label>
+            )}
+
+            {as === 'input' && <input {...commonProps} />}
+            {as === 'textarea' && <textarea {...commonProps} />}
+
+            {error && <p className={css.error}>{error.message}</p>}
+        </div>
+    );
+};
+
+
+
+export default TextField;

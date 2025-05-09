@@ -1,0 +1,33 @@
+.container {
+    position: relative;
+    overflow: hidden;
+    height: 600px;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+
+.container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(../../assets/images/1991c23e3279ed43fc34e4b37e4864e1f9e9769d.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: scaleX(-1);
+    transform-origin: center center;
+    z-index: -1;
+}
+
+.inner{
+    margin: 80px auto auto 40px;
+}
+.title{
+    color: #fff;
+    font-size: 96px;
+    line-height: 110px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}

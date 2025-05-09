@@ -1,0 +1,35 @@
+.wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  
+}
+
+.label {
+    font-size: 18px;
+    
+    width: 100px;
+}
+
+.input {
+    background-color: var(--main-background-color);
+    padding: 16px 32px;
+    border: 1px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    font-size: 20px;
+    
+
+}
+
+.input::placeholder {
+    color: #fff;
+    
+}
+
+.error {
+    width: 100%;
+    color: red;
+    font-size: 16px;
+}
