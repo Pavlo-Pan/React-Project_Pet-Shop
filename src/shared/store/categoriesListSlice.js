@@ -3,7 +3,7 @@ import { getCategories } from '../api/api';
 
 const initialState = {
     items: [],
-    status: 'idle',     // 'idle' | 'loading' | 'succeeded' | 'failed'
+    status: 'idle',   
     error: null,
 };
 
@@ -11,8 +11,7 @@ export const fetchCategories = createAsyncThunk(
   'categoriesList/fetchCategories',
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await getCategories();  // data — массив категорий
-      // дописываем хост/порт к каждому image
+      const { data } = await getCategories();  
       const withFullUrls = data.map(cat => ({
         ...cat,
         image: `http://localhost:3333${cat.image}`

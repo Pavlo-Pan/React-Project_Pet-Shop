@@ -21,12 +21,12 @@ const cartSlice = createSlice({
     initialState,
     reducers: {
         addToCart(state, action) {
-            const product = action.payload;
+            const { product, quantity } = action.payload;
             const id = product.id;
             if (state.items[id]) {
-                state.items[id].qty += 1;
+                state.items[id].qty += quantity;
             } else {
-                state.items[id] = { product, qty: 1 };
+                state.items[id] = { product, qty: quantity };
             }
             recalcTotals(state);
         },

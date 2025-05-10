@@ -1,18 +1,34 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getCategoryById } from '../api/api';
+import { getCategories, getCategoryById } from '../api/api';
 
 const initialState = {
-    category: null,
+    list: [],
+    listStatus: 'idle',    
+    listError: null,
+
+    detail: null,
     products: [],
-    status: 'idle',    
-    error: null,
+    detailStatus: 'idle',
+
     filters: {
         priceFrom: 0,
         priceTo: Infinity,
         discounted: false,
-        sortBy: 'default', 
+        sortBy: 'default',    
     },
 };
+
+export const fetchCategories = createAsyncThunk(
+    'categories/fetchCategories',
+    async (_, { rejectWithValue }) => {
+        try {
+            const { data } = await getCategories();
+            return data;
+        } catch (err) {
+            return rejectWithValue(err.response?.data || err.message);
+        }
+    }
+);
 
 export const fetchCategory = createAsyncThunk(
     'categories/fetchCategory',
@@ -30,47 +46,61 @@ const categoriesSlice = createSlice({
     name: 'categories',
     initialState,
     reducers: {
-        setCategoryPriceFilter(state, { payload: { from, to } }) {
+        setPriceFilter(state, { payload: { from, to } }) {
             state.filters.priceFrom = from;
             state.filters.priceTo = to;
         },
-        setCategoryDiscountedFilter(state, { payload }) {
+        setDiscountedFilter(state, { payload }) {
             state.filters.discounted = payload;
         },
-        setCategorySortBy(state, { payload }) {
+        setSortBy(state, { payload }) {
             state.filters.sortBy = payload;
         },
-        clearCategory(state) {
-            state.category = null;
+        clearDetail(state) {
+            state.detail = null;
             state.products = [];
-            state.status = 'idle';
-            state.error = null;
+            state.detailStatus = 'idle';
+            state.detailError = null;
             state.filters = initialState.filters;
         },
     },
     extraReducers: builder => {
         builder
+            .addCase(fetchCategories.pending, state => {
+                state.listStatus = 'loading';
+                state.listError = null;
+            })
+            .addCase(fetchCategories.fulfilled, (state, { payload }) => {
+                state.listStatus = 'succeeded';
+                state.list = payload;
+            })
+            .addCase(fetchCategories.rejected, (state, { payload }) => {
+                state.listStatus = 'failed';
+                state.listError = payload;
+            });
+
+        builder
             .addCase(fetchCategory.pending, state => {
-                state.status = 'loading';
-                state.error = null;
+                state.detailStatus = 'loading';
+                state.detailError = null;
             })
             .addCase(fetchCategory.fulfilled, (state, { payload }) => {
-                state.status = 'succeeded';
-                state.category = payload.category;
+                state.detailStatus = 'succeeded';
+                state.detail = payload.category;
                 state.products = payload.data;
             })
             .addCase(fetchCategory.rejected, (state, { payload }) => {
-                state.status = 'failed';
-                state.error = payload;
+                state.detailStatus = 'failed';
+                state.detailError = payload;
             });
     },
 });
 
 export const {
-    setCategoryPriceFilter,
-    setCategoryDiscountedFilter,
-    setCategorySortBy,
-    clearCategory,
+    setPriceFilter,
+    setDiscountedFilter,
+    setSortBy,
+    clearDetail,
 } = categoriesSlice.actions;
 
 export default categoriesSlice.reducer;

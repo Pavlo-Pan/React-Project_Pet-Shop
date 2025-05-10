@@ -6,7 +6,7 @@ import Register from "../../modules/Register/Register";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import ProductsSector from "../../modules/ProductSector/ProductSector";
 const HomePage = () => {
-    useDocumentTitle('Pet Shop - Home');
+    useDocumentTitle('Pet Shop');
     return (
         < >
             <HeadMainPage />

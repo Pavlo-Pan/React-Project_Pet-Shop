@@ -3,7 +3,7 @@ import ProductsSector from "../../modules/ProductSector/ProductSector";
 import Container from "../../shared/components/Container/Container";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 const DiscountedItemsPage = () => {
-    useDocumentTitle('Pet Shop - Discount');
+    useDocumentTitle('Discount');
     return (
         <Container>
             <SectionTitle title="Discounted items" />

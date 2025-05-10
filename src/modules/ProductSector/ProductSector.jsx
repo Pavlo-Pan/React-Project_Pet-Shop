@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../shared/store/productsSlice';
 import ProductCard from '../../shared/components/ProductCard.jsx/ProductCard';
-import styles from './ProductsSector.module.css';
+import FlexLayout from '../layouts/FlexLayout/FlexLayout';
+
 
 
 const ProductsSector = ({ limit, discountedOnly = false }) => {
@@ -32,11 +33,11 @@ const ProductsSector = ({ limit, discountedOnly = false }) => {
   }
 
   return (
-    <div className={styles.flex}>
+    <FlexLayout>
       {displayedProducts.map(p => (
         <ProductCard key={p.id} product={p} />
       ))}
-    </div>
+    </FlexLayout>
   );
 };
 

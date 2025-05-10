@@ -1,0 +1,33 @@
+.gallery {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.thumb {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    transition: border-color .2s;
+}
+
+.thumb:hover {
+    border-color: #3b82f6;
+}
+
+.mainImage {
+    flex-shrink: 0;
+    width: 548px;
+    height: 572px;
+    object-fit: cover;
+    border-radius: 8px;
+}

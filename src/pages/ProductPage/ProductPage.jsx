@@ -1,10 +1,10 @@
-import { useDocumentTitle } from "../../shared/hooks/useDocumentTitle";
 
+import ProductDetail from "../../modules/ProductDetail/ProductDetail";
 const ProductPage =() =>{
-    useDocumentTitle('Pet Shop - Product');
+        
     return(
         <>
-        <h1>ProductPage</h1>
+        <ProductDetail/>
         </>
     )
 }

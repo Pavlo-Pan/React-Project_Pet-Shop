@@ -5,7 +5,7 @@ const GoogleMapEmbed = ({ width = 1350, height = 350 }) => {
             width={width}
             height={height}
             style={{ borderRadius: 12 }}
-            allowFullScreen // в JSX булевый атрибут
+            allowFullScreen 
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Map"

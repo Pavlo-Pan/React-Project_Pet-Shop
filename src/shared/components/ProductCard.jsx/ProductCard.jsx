@@ -1,23 +1,16 @@
 
 import { Link } from 'react-router-dom';
+import { calcDiscountPercent } from '../../utils/mathFunc';
 import styles from './ProductCard.module.css';
 
 const ProductCard = ({ product }) => {
-
     const { id, title, price, discont_price, image } = product;
-
-
-    const discountPercent = discont_price
-        ? Math.round((1 - discont_price / price) * 100)
-        : null;
-
-
-
+    const discountPercent = calcDiscountPercent(price, discont_price)
     return (
         <div className={styles.container}>
             <div className={styles.card}>
                 <Link to={`/products/${id}`} className={styles.imageWrapper}>
-                    <img src={image} alt={title} className={styles.img} />
+                    <img src={`http://localhost:3333${image}`} alt={title} className={styles.img} />
                     {discountPercent && (
                         <div className={styles.discountBadge}>-{discountPercent}%</div>
                     )}

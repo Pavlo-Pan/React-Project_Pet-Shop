@@ -23,13 +23,13 @@ export async function sendCoupon(values) {
         try {
             payload = JSON.parse(text);
         } catch (err) {
-            console.warn("Не удалось распарсить JSON из ответа:", err);
+            console.warn("Error:", err);
         }
     }
     if (!response.ok) {
         const msg = payload && payload.message
             ? payload.message
-            : `Ошибка ${response.status}`;
+            : `Error ${response.status}`;
         throw new Error(msg);
     }
     return payload;

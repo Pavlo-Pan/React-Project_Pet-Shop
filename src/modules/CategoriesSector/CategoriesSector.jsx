@@ -3,8 +3,7 @@ import { useEffect } from 'react';
 import CategoryCard from '../../shared/components/CategoryCard/CategoryCard';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCategories } from '../../shared/store/categoriesListSlice';
-
-import styles from './CategoriesSector.module.css';
+import FlexLayout from '../layouts/FlexLayout/FlexLayout';
 
 const CategoriesSector = ({ limit }) => {
     const dispatch = useDispatch();
@@ -21,7 +20,6 @@ const CategoriesSector = ({ limit }) => {
     if (status === 'loading') return <p>Loading</p>;
     if (status === 'failed') return <p>Error: {error}</p>;
 
-    // Если limit не передали — рендерим все
     const toRender = typeof limit === 'number'
         ? categories.slice(0, limit)
         : categories;
@@ -29,11 +27,11 @@ const CategoriesSector = ({ limit }) => {
     return (
 
 
-            <div className={styles.flex}>
+            <FlexLayout>
                 {toRender.map(cat => (
                     <CategoryCard key={cat.id} category={cat} />
                 ))}
-            </div>
+            </FlexLayout>
 
     );
 };
