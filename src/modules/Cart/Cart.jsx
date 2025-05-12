@@ -16,7 +16,11 @@ const Cart = () => {
     const dispatch = useDispatch();
     const items = useSelector(state => state.cart.items);
     const totalQty = useSelector(state => state.cart.totalQty);
-    const totalPrice = useSelector(state => state.cart.totalPrice);
+    const totalPrice = Object.values(items)
+        .reduce((sum, { product, qty }) => {
+            const unitPrice = product.discont_price ?? product.price;
+            return sum + unitPrice * qty;
+        }, 0);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     if (totalQty === 0) return <EmptyCart />;
