@@ -8,6 +8,7 @@ import ImageGalery from './ImageGalery/ImageGalery'
 import PriceInfo from './PriceInfo/PriceInfo'
 import Descriptions from './Descriptions/Descriptions'
 import Btn from '../../shared/components/Btn/Btn'
+import Breadcrumbs from '../BreadCrumbs/BreadCrumbs'
 import styles from './ProductDetail.module.css'
 import { useDocumentTitle } from '../../shared/hooks/useDocumentTitle'
 const ProductDetail = () => {
@@ -38,22 +39,25 @@ const ProductDetail = () => {
     }
 
     return (
-        <div className={styles.wrapper}>
-            <ImageGalery images={imgs} />
-            <div className={styles.details}>
-                <h1 className={styles.title}>{product.title}</h1>
-                <PriceInfo
-                    price={product.price}
-                    discont_price={product.discont_price}
-                />
-                <div className={styles.counBtn}>
-                    <Counter qty={qty} onChange={setQty} />
-                    <Btn width='316px' onClick={handleAdd}>
-                        Add to cart
-                    </Btn>
-                </div>
+        <div>
+            < Breadcrumbs />
+            <div className={styles.wrapper}>
+                <ImageGalery images={imgs} />
+                <div className={styles.details}>
+                    <h1 className={styles.title}>{product.title}</h1>
+                    <PriceInfo
+                        price={product.price}
+                        discont_price={product.discont_price}
+                    />
+                    <div className={styles.counBtn}>
+                        <Counter qty={qty} onChange={setQty} />
+                        <Btn width='316px' onClick={handleAdd}>
+                            Add to cart
+                        </Btn>
+                    </div>
 
-                <Descriptions text={product.description} />
+                    <Descriptions text={product.description} />
+                </div>
             </div>
         </div>
     )

@@ -7,6 +7,7 @@ import ProductCard from "../../shared/components/ProductCard.jsx/ProductCard";
 import Container from "../../shared/components/Container/Container";
 import SectionTitle from "../../shared/components/SectionTitle/SectionTitle";
 import FlexLayout from "../../modules/layouts/FlexLayout/FlexLayout";
+import Breadcrumbs from "../../modules/BreadCrumbs/BreadCrumbs";
 const CategoryDetailPage = () => {
     
     const { id } = useParams();
@@ -30,6 +31,7 @@ useDocumentTitle(category?.title || "Loading…");
     return (
         <>
                 <Container>
+                    <Breadcrumbs/>
             {category && <SectionTitle title={category.title} />}
                 <FlexLayout>{products.map(prod => (
                 <ProductCard key={prod.id} product={prod} />
