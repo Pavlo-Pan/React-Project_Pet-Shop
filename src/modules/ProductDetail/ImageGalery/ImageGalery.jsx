@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import styles from './ImageGalery.module.css';
 const API_URL =  'http://localhost:3333';

@@ -19,7 +19,6 @@ const initialState = {
     },
 };
 
-// Fetch all categories (with full image URLs)
 export const fetchCategories = createAsyncThunk(
     'categories/fetchCategories',
     async (_, { rejectWithValue }) => {
@@ -35,7 +34,6 @@ export const fetchCategories = createAsyncThunk(
     }
 );
 
-// Fetch single category and its products
 export const fetchCategory = createAsyncThunk(
     'categories/fetchCategory',
     async (id, { rejectWithValue }) => {
@@ -72,7 +70,6 @@ const categoriesSlice = createSlice({
     },
     extraReducers: builder => {
         builder
-            // Categories list
             .addCase(fetchCategories.pending, state => {
                 state.listStatus = 'loading';
                 state.listError = null;
@@ -85,7 +82,6 @@ const categoriesSlice = createSlice({
                 state.listStatus = 'failed';
                 state.listError = payload;
             })
-            // Category detail
             .addCase(fetchCategory.pending, state => {
                 state.detailStatus = 'loading';
                 state.detailError = null;

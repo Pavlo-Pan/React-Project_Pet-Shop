@@ -17,13 +17,11 @@ const RegisterForm = () => {
   const [serverError, setServerError] = useState(null);
   const [successMessage, setSuccessMessage] = useState(null);
 
-
   useEffect(() => {
     if (!serverError) return;
     const timer = setTimeout(() => setServerError(null), 5000);
     return () => clearTimeout(timer);
   }, [serverError]);
-
 
   useEffect(() => {
     if (!successMessage) return;
@@ -47,7 +45,6 @@ const RegisterForm = () => {
     <form onSubmit={handleSubmit(onSubmit)}>
       {serverError && <div style={{ color: "red" }}>{serverError}</div>}
       {successMessage && <div style={{ color: "#fff" }}>{successMessage}</div>}
-
       <TextField
         {...fields.username}
         register={register}
@@ -66,7 +63,6 @@ const RegisterForm = () => {
         error={errors.email}
         styles={{ width: "516px" }}
       />
-
       <Btn
         type="submit"
         disabled={isSubmitting}

@@ -1,6 +1,5 @@
 const fields = {
     username: {
-       
         type: "text",
         placeholder: "Name",
         name: "username",
@@ -22,7 +21,6 @@ const fields = {
         }
     },
     email: {
-      
         type: "email",
         placeholder: "Email",
         name: "email",

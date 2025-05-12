@@ -4,7 +4,6 @@ import SectionTitle from '../../shared/components/SectionTitle/SectionTitle'
 import FlexLayout from '../../modules/layouts/FlexLayout/FlexLayout'
 import Cart from "../../modules/Cart/Cart";
 
-
 const CartPage = () => {
     useDocumentTitle('Cart');
     return (

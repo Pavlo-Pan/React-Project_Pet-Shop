@@ -4,8 +4,6 @@ import { fetchProducts } from '../../shared/store/productsSlice';
 import ProductCard from '../../shared/components/ProductCard.jsx/ProductCard';
 import FlexLayout from '../layouts/FlexLayout/FlexLayout';
 
-
-
 const ProductsSector = ({ limit, discountedOnly = false }) => {
   const dispatch = useDispatch();
   const { items: products, status, error } = useSelector(state => state.products);
@@ -26,7 +24,6 @@ const ProductsSector = ({ limit, discountedOnly = false }) => {
   if (discountedOnly) {
     displayedProducts = displayedProducts.filter(p => p.discont_price != null);
   }
-
 
   if (typeof limit === 'number') {
     displayedProducts = displayedProducts.slice(0, limit);

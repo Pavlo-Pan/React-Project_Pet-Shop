@@ -2,8 +2,8 @@
 const CartIcon = ({ width = 48, height = 48, ...props }) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 48 48"      // Важно: привязывает координаты к исходному размеру
-        width={width}            // Управляйте этими пропсами при использовании иконки
+        viewBox="0 0 48 48"      
+        width={width}            
         height={height}
         fill="none"
         {...props}

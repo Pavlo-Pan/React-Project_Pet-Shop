@@ -9,7 +9,7 @@ const TextField = ({
     error,
     as = 'input',
     styles: inputStyles = {},
-    placeholderColor,          
+    placeholderColor,
     ...props
 }) => {
     const id = useId();

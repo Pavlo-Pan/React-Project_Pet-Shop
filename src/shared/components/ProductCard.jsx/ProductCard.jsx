@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { calcDiscountPercent } from '../../utils/mathFunc';
 import styles from './ProductCard.module.css';
