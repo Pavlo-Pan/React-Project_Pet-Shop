@@ -9,16 +9,24 @@ const TextField = ({
     error,
     as = 'input',
     styles: inputStyles = {},
+    placeholderColor,          
     ...props
 }) => {
     const id = useId();
+
+    const styleWithPlaceholder = {
+        ...inputStyles,
+        ...(placeholderColor
+            ? { '--placeholder-color': placeholderColor }
+            : {}),
+    };
 
     const commonProps = {
         id,
         ...register(name, rules),
         ...props,
         className: css.input,
-        style: inputStyles,
+        style: styleWithPlaceholder,
     };
 
     return (
@@ -36,7 +44,5 @@ const TextField = ({
         </div>
     );
 };
-
-
 
 export default TextField;

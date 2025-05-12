@@ -1,0 +1,39 @@
+.wrapper {
+    width: 528px;
+    background: #f5f6f7;
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.title {
+    margin: 0 0 24px 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--main-text-color);
+}
+
+.sub {
+    margin: 4px 0 16px;
+    font-size: 40px;
+    color: #888888;
+}
+
+.total {
+    display: flex;
+    align-items: baseline;
+    margin-bottom:40px;
+    justify-content: space-between;
+}
+
+.total-label {
+    font-size: 40px;
+    color: #888888;
+    margin-right: 8px;
+}
+
+.total-value {
+    font-size: 64px;
+    font-weight: 700;
+    color: #000;
+    
+}
