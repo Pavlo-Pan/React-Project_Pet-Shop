@@ -2,7 +2,7 @@
 import OrdersForm from '../OrdersForm/OrdersForm';
 import styles from './OrderDetails.module.css';
 
-const OrderDetails = ({ itemsCount = 3, total = '97.00' }) => {
+const OrderDetails = ({ itemsCount = 3, total = '97.00', onOrder }) => {
     return (
         <div className={styles.wrapper}>
             <h2 className={styles.title}>Order details</h2>
@@ -11,7 +11,7 @@ const OrderDetails = ({ itemsCount = 3, total = '97.00' }) => {
                 <span className={styles['total-label']}>Total</span>
                 <span className={styles['total-value']}>${total}</span>
             </div>
-            <OrdersForm />
+            <OrdersForm onOrder={onOrder} />
         </div>
     );
 };

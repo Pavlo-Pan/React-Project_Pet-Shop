@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { CartIcon } from '../../assets/icons/Icons'
+import { CartIcon } from '../../../assets/icons/Icons'
 import styles from './CartIconsComponent.module.css';
 const CartIconsComponent = () => {
     const totalQty = useSelector(state => state.cart.totalQty);

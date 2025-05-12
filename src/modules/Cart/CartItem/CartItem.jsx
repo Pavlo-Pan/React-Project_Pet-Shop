@@ -1,5 +1,5 @@
-import CrossButton from '../../assets/icons/CrossButton';
-import Counter from '../../shared/components/Counter/Counter'
+import CrossButton from '../../../assets/icons/CrossButton';
+import Counter from '../../../shared/components/Counter/Counter'
 import styles from './CartItem.module.css';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333';
@@ -10,6 +10,7 @@ const CartItem = ({ product, quantity, onQuantityChange, onRemove }) => {
     const unitPrice = discont_price ?? price;
     const totalPrice = unitPrice * quantity;
     const hasDiscount = discont_price != null;
+    const totalOldPrice = price * quantity;
 
     return (
         <div className={styles.card}>
@@ -18,20 +19,23 @@ const CartItem = ({ product, quantity, onQuantityChange, onRemove }) => {
                 alt={title}
                 className={styles.image}
             />
+            <div className={styles.cont}>
             <div className={styles.info}>
                 <div className={styles.title}>{title}</div>
-                <Counter qty={quantity} onChange={onQuantityChange} />
-            </div>
-            <div className={styles.price}>
-                ${totalPrice}
-                {hasDiscount && (
-                    <span className={styles.oldPrice}>${price}</span>
-                )}
-            </div>
-            <CrossButton
+                
+                <CrossButton
                 onClick={() => onRemove(id)}
                 style={{ marginLeft: '16px' }}
             />
+            </div>
+            <div className={styles.price}>
+                <Counter qty={quantity} onChange={onQuantityChange} />
+                ${totalPrice}
+                {hasDiscount && (
+                    <span className={styles.oldPrice}>${totalOldPrice}</span>
+                )}
+            </div>
+            </div>
         </div>
     );
 };
