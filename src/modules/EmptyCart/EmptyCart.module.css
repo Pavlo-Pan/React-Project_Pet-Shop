@@ -1,0 +1,11 @@
+.text{
+    margin-bottom: 32px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 130%;
+    color: var(--main-text-color);
+}
+.cont{
+    gap: 32px;
+    margin: 40px 0 0 0;
+}
