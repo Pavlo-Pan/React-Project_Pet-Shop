@@ -1,12 +1,13 @@
 import { useDocumentTitle } from "../../shared/hooks/useDocumentTitle";
-
+import Container from "../../shared/components/Container/Container";
+import SectionTitle from '../../shared/components/SectionTitle/SectionTitle'
 const CartPage = () =>{
     useDocumentTitle('Cart');
     return(
-        <>
-        <h1>CartPage</h1>
+        <Container>
+        <SectionTitle title='Shopping cart' linkTo='/categories' linkText='Back to the store'/>
 
-        </>
+        </Container>
     )
 }
 
