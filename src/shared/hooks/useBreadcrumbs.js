@@ -36,7 +36,7 @@ export function useBreadcrumbs() {
         }
     }
     else if (segments[0] === 'sales') {
-        crumbs.push({ name: 'All sales', to: '/sales' });
+        crumbs.push({ name: 'All sales', to: '/discount '});
     }
 
     return crumbs;

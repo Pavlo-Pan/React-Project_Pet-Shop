@@ -12,7 +12,7 @@ const navbarMenuItems = [
         text: "All products",
     },
     {
-        href: "/discount",
+        href: "/sales",
         text: "All sales",
     },
 ]

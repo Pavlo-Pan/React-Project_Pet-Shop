@@ -20,7 +20,7 @@ const HomePage = () => {
             <Container>
                 <SectionTitle
                     title="Sale"
-                    linkTo="/discount"
+                    linkTo="/sales"
                     linkText="All sales" />
                     <ProductsSector limit={4} discountedOnly={true} />
             </Container>

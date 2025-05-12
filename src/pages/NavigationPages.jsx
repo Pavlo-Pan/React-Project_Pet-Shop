@@ -15,7 +15,7 @@ const NavigationPages = () => {
             <Route path="/categories" element={<CategoriesPage />} />
             <Route path="/categories/:id" element={<CategoryDetailPage />} />
             <Route path="/products" element={<AllProductsPage />} />
-            <Route path="/discount" element={<DiscountedItemsPage />} />
+            <Route path="/sales" element={<DiscountedItemsPage />} />
             <Route path="/products/:id" element={<ProductPage />} />
             <Route path="/cart" element={<CartPage/>} />
             <Route path="*" element={<NotFoundPage />} />
