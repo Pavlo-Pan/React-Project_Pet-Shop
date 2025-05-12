@@ -3,33 +3,39 @@ import { getCategories, getCategoryById } from '../api/api';
 
 const initialState = {
     list: [],
-    listStatus: 'idle',    
+    listStatus: 'idle',
     listError: null,
 
     detail: null,
     products: [],
     detailStatus: 'idle',
+    detailError: null,
 
     filters: {
         priceFrom: 0,
         priceTo: Infinity,
         discounted: false,
-        sortBy: 'default',    
+        sortBy: 'default',
     },
 };
 
+// Fetch all categories (with full image URLs)
 export const fetchCategories = createAsyncThunk(
     'categories/fetchCategories',
     async (_, { rejectWithValue }) => {
         try {
             const { data } = await getCategories();
-            return data;
+            return data.map(cat => ({
+                ...cat,
+                image: `http://localhost:3333${cat.image}`,
+            }));
         } catch (err) {
             return rejectWithValue(err.response?.data || err.message);
         }
     }
 );
 
+// Fetch single category and its products
 export const fetchCategory = createAsyncThunk(
     'categories/fetchCategory',
     async (id, { rejectWithValue }) => {
@@ -66,6 +72,7 @@ const categoriesSlice = createSlice({
     },
     extraReducers: builder => {
         builder
+            // Categories list
             .addCase(fetchCategories.pending, state => {
                 state.listStatus = 'loading';
                 state.listError = null;
@@ -77,9 +84,8 @@ const categoriesSlice = createSlice({
             .addCase(fetchCategories.rejected, (state, { payload }) => {
                 state.listStatus = 'failed';
                 state.listError = payload;
-            });
-
-        builder
+            })
+            // Category detail
             .addCase(fetchCategory.pending, state => {
                 state.detailStatus = 'loading';
                 state.detailError = null;

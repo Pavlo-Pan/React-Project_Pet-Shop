@@ -1,15 +1,17 @@
-// modules/CategoriesSector/CategoriesSector.jsx
 import { useEffect } from 'react';
 import CategoryCard from '../../shared/components/CategoryCard/CategoryCard';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCategories } from '../../shared/store/categoriesListSlice';
+import { fetchCategories } from '../../shared/store/categorieSlice';
 import FlexLayout from '../layouts/FlexLayout/FlexLayout';
 
 const CategoriesSector = ({ limit }) => {
     const dispatch = useDispatch();
-    const { items: categories, status, error } = useSelector(
-        state => state.categoriesList
-    );
+    const {
+        list: categories,
+        listStatus: status,
+        listError: error
+    } = useSelector(state => state.categories);
+
 
     useEffect(() => {
         if (status === 'idle') {
@@ -27,11 +29,11 @@ const CategoriesSector = ({ limit }) => {
     return (
 
 
-            <FlexLayout>
-                {toRender.map(cat => (
-                    <CategoryCard key={cat.id} category={cat} />
-                ))}
-            </FlexLayout>
+        <FlexLayout>
+            {toRender.map(cat => (
+                <CategoryCard key={cat.id} category={cat} />
+            ))}
+        </FlexLayout>
 
     );
 };
