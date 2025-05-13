@@ -22,7 +22,7 @@ const HomePage = () => {
                     title="Sale"
                     linkTo="/sales"
                     linkText="All sales" />
-                    <ProductsSector limit={4} discountedOnly={true} />
+                    <ProductsSector limit={4} discountedOnly={true}  />
             </Container>
         </>
     )
