@@ -16,3 +16,6 @@
     border: 1px solid var(--secondary-background-color);
     background-color: #fff;
 }
+.active:hover{
+    color: #FFF;
+}

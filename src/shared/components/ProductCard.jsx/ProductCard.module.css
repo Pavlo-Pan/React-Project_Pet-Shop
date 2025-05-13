@@ -9,7 +9,9 @@
     transition: box-shadow .2s;
     width: 315px;
     height: 430px;
+
 }
+
 .card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .1);
 }
@@ -46,7 +48,7 @@
 }
 
 .title {
-    
+
     font-size: 20px;
     font-weight: 500;
     text-align: center;
@@ -54,6 +56,7 @@
     color: inherit;
     margin-bottom: 8px;
 }
+
 .title:hover {
     text-decoration: underline;
 }
@@ -81,14 +84,27 @@
     color: var(--main-text-coloror);
 }
 
-.btnContainer{
-    /* display: none; */
-        display: flex;
-        position: relative;
-        top: 268px;
-        right: -16px;
-       z-index: 5;
+.container {
+    position: relative;
 }
-.btnContainer:hover{
+
+.btnContainer {
     display: flex;
+    position: absolute;
+    top: 210px;
+    right: 16px;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-in-out, visibility .2s ease-in-out;
+}
+
+.container:hover .btnContainer {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hovered .btnContainer {
+    opacity: 1;
+    visibility: visible;
 }

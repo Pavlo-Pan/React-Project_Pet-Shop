@@ -18,8 +18,9 @@ const ProductCard = ({ product }) => {
             dispatch(removeFromCart(id));
         }
     };
+    const containerClass = `${styles.container} ${inCart ? styles.hovered : ''}`;
     return (
-        <div className={styles.container}>
+        <div className={containerClass}>
             <div className={styles.btnContainer}>
                 <Btn isToggle
                     onToggle={handleToggle}
