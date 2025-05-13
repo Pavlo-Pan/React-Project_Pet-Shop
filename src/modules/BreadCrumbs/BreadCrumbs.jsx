@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useBreadcrumbs } from '../../shared/hooks/useBreadcrumbs';
-import styles from './Breadcrumbs.module.css';
+import styles from "./BreadCrumbs.module.css";
 
 const Breadcrumbs = () => {
     const crumbs = useBreadcrumbs();
