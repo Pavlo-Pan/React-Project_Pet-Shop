@@ -1,12 +1,33 @@
 import { Link } from 'react-router-dom';
 import { calcDiscountPercent } from '../../utils/mathFunc';
+import { useDispatch, useSelector  } from 'react-redux';
+import { addToCart, removeFromCart } from '../../store/cartSlice';
+import Btn from '../Btn/Btn'
 import styles from './ProductCard.module.css';
 const API_URL = import.meta.env.VITE_API_URL;
 const ProductCard = ({ product }) => {
+    const dispatch = useDispatch();
     const { id, title, price, discont_price, image } = product;
-    const discountPercent = calcDiscountPercent(price, discont_price)
+    const discountPercent = calcDiscountPercent(price, discont_price);
+
+    const inCart = useSelector(state => Boolean(state.cart.items[id]));
+    const handleToggle = () => {
+        if (!inCart) {
+            dispatch(addToCart({ product, quantity: 1 }));
+        } else {
+            dispatch(removeFromCart(id));
+        }
+    };
     return (
         <div className={styles.container}>
+            <div className={styles.btnContainer}>
+                <Btn isToggle
+                    onToggle={handleToggle}
+                    width="284px"
+                    className={inCart? styles.active : ''}>
+                    {inCart ? 'Remove from cart' : 'Add to cart'}
+                </Btn>
+            </div>
             <div className={styles.card}>
                 <Link to={`/products/${id}`} className={styles.imageWrapper}>
                     <img src={`${API_URL}${image}`} alt={title} className={styles.img} />
