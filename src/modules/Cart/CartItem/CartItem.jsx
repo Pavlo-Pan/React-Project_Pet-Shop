@@ -1,8 +1,7 @@
 import CrossButton from '../../../assets/icons/CrossButton';
 import Counter from '../../../shared/components/Counter/Counter'
 import styles from './CartItem.module.css';
-
-const API_URL = import.meta.env.VITE_API_URL;
+import { API_URL } from '../../../shared/config/config';
 
 const CartItem = ({ product, quantity, onQuantityChange, onRemove }) => {
     if (!product) return null;

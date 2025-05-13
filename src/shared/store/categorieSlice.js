@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getCategories, getCategoryById } from '../api/api';
-const API_URL = import.meta.env.VITE_API_URL;
+import { API_URL } from '../config/config';
 const initialState = {
     list: [],
     listStatus: 'idle',

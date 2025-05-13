@@ -4,7 +4,7 @@ import { useDispatch, useSelector  } from 'react-redux';
 import { addToCart, removeFromCart } from '../../store/cartSlice';
 import Btn from '../Btn/Btn'
 import styles from './ProductCard.module.css';
-const API_URL = import.meta.env.VITE_API_URL;
+import { API_URL } from '../../config/config';
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
     const { id, title, price, discont_price, image } = product;
