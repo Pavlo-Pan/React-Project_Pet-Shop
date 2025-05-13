@@ -4,13 +4,15 @@ import { fetchProducts } from '../../shared/store/productsSlice';
 import ProductCard from '../../shared/components/ProductCard.jsx/ProductCard';
 import FlexLayout from '../layouts/FlexLayout/FlexLayout';
 import { getFinalPrice } from '../../shared/utils/mathFunc';
+import { API_URL } from '../../shared/config/config';
 const ProductsSector = ({
   limit,
   discountedOnly = false,
   filters = {}
 }) => {
   const dispatch = useDispatch();
-  const { items: products, status, error } = useSelector(state => state.products);
+  const { items, status, error } = useSelector(state => state.products);
+  const products = Array.isArray(items) ? items : [];
 
   const {
     priceFrom = 0,
@@ -25,8 +27,12 @@ const ProductsSector = ({
     }
   }, [dispatch, status]);
 
-  if (status === 'loading') return <p>Loading products…</p>;
-  if (status === 'failed') return <p>Error: {error}</p>;
+  if (status === 'idle' || status === 'loading') {
+    return <p>Loading products…</p>;
+  }
+  if (status === 'failed') {
+    return <p style={{ color: 'red' }}>Error: {error}</p>;
+  }
 
   let list = products
     .filter(p => {
@@ -39,15 +45,13 @@ const ProductsSector = ({
     );
 
   if (sortBy === 'newest') {
-    list = list.slice().sort((a, b) =>
-      new Date(b.createdAt) - new Date(a.createdAt)
-    );
+    list = [...list].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   } else if (sortBy === 'priceDesc') {
-    list = list.slice().sort((a, b) =>
+    list = [...list].sort((a, b) =>
       getFinalPrice(b.price, b.discont_price) - getFinalPrice(a.price, a.discont_price)
     );
   } else if (sortBy === 'priceAsc') {
-    list = list.slice().sort((a, b) =>
+    list = [...list].sort((a, b) =>
       getFinalPrice(a.price, a.discont_price) - getFinalPrice(b.price, b.discont_price)
     );
   }
@@ -58,7 +62,9 @@ const ProductsSector = ({
 
   return (
     <FlexLayout>
-      {list.map(p => <ProductCard key={p.id} product={p} />)}
+      {list.length > 0
+        ? list.map(p => <ProductCard key={p.id} product={p} />)
+        : <p>No products found.</p>}
     </FlexLayout>
   );
 };

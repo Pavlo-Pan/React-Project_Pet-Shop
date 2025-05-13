@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getCategories, getCategoryById } from '../api/api';
-
+const API_URL = import.meta.env.VITE_API_URL;
 const initialState = {
     list: [],
     listStatus: 'idle',
@@ -26,7 +26,7 @@ export const fetchCategories = createAsyncThunk(
             const { data } = await getCategories();
             return data.map(cat => ({
                 ...cat,
-                image: `http://localhost:3333${cat.image}`,
+                image: `${API_URL}${cat.image}`,
             }));
         } catch (err) {
             return rejectWithValue(err.response?.data || err.message);

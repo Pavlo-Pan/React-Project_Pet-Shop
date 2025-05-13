@@ -2,7 +2,7 @@ import CrossButton from '../../../assets/icons/CrossButton';
 import Counter from '../../../shared/components/Counter/Counter'
 import styles from './CartItem.module.css';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3333';
+const API_URL = import.meta.env.VITE_API_URL;
 
 const CartItem = ({ product, quantity, onQuantityChange, onRemove }) => {
     if (!product) return null;
@@ -20,21 +20,21 @@ const CartItem = ({ product, quantity, onQuantityChange, onRemove }) => {
                 className={styles.image}
             />
             <div className={styles.cont}>
-            <div className={styles.info}>
-                <div className={styles.title}>{title}</div>
-                
-                <CrossButton
-                onClick={() => onRemove(id)}
-                style={{ marginLeft: '16px' }}
-            />
-            </div>
-            <div className={styles.price}>
-                <Counter qty={quantity} onChange={onQuantityChange} />
-                ${totalPrice}
-                {hasDiscount && (
-                    <span className={styles.oldPrice}>${totalOldPrice}</span>
-                )}
-            </div>
+                <div className={styles.info}>
+                    <div className={styles.title}>{title}</div>
+
+                    <CrossButton
+                        onClick={() => onRemove(id)}
+                        style={{ marginLeft: '16px' }}
+                    />
+                </div>
+                <div className={styles.price}>
+                    <Counter qty={quantity} onChange={onQuantityChange} />
+                    ${totalPrice}
+                    {hasDiscount && (
+                        <span className={styles.oldPrice}>${totalOldPrice}</span>
+                    )}
+                </div>
             </div>
         </div>
     );

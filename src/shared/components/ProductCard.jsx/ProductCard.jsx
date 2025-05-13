@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { calcDiscountPercent } from '../../utils/mathFunc';
 import styles from './ProductCard.module.css';
-
+const API_URL = import.meta.env.VITE_API_URL;
 const ProductCard = ({ product }) => {
     const { id, title, price, discont_price, image } = product;
     const discountPercent = calcDiscountPercent(price, discont_price)
@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
         <div className={styles.container}>
             <div className={styles.card}>
                 <Link to={`/products/${id}`} className={styles.imageWrapper}>
-                    <img src={`http://localhost:3333${image}`} alt={title} className={styles.img} />
+                    <img src={`${API_URL}${image}`} alt={title} className={styles.img} />
                     {discountPercent && (
                         <div className={styles.discountBadge}>-{discountPercent}%</div>
                     )}
