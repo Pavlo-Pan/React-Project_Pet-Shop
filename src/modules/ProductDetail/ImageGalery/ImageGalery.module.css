@@ -21,7 +21,7 @@
 }
 
 .thumb:hover {
-    border-color: #3b82f6;
+    border-color: var(--main-background-color);
 }
 
 .mainImage {

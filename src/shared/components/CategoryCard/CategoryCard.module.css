@@ -3,7 +3,7 @@
     flex-direction: column;
     text-decoration: none;
     color: inherit;
-    border: 1px solid #eee;
+    border: 1px solid var(--light-grey);
     border-radius: 12px;
     overflow: hidden;
     transition: box-shadow .2s;

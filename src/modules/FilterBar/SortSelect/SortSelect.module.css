@@ -8,7 +8,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-right: 16px;
-    color: #111827;
+    color: var(--main-text-color);
 }
 
 .select {
@@ -16,7 +16,7 @@
     -webkit-appearance: none;
     width: 200px;
     padding: 8px 32px 8px 12px;
-    border: 1px solid #D1D5DB;
+    border: 1px solid var(--grey-divider);
     border-radius: 6px;
     background-color: #FFFFFF;
     cursor: pointer;
@@ -32,5 +32,5 @@
     transform: translateY(-50%);
     pointer-events: none;
     font-size: 12px;
-    color: #6B7280;
+    color: var(--light-text-color);
 }

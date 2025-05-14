@@ -9,13 +9,13 @@
     font-size: 20px;
     font-weight: 600;
     margin-right: 16px;
-    color: #111827;
+    color: var(--main-text-color);
 }
 
 .input {
     width: 112px;
     padding: 8px 16px;
-    border: 1px solid #DDDDDD;
+    border: 1px solid var(--grey-divider);
     outline: none;
     border-radius: 6px;
     font-size: 16px;
@@ -25,7 +25,7 @@
 }
 
 .input::placeholder {
-    color: #000000B2;
+    color: var(--main-text-color);
 }
 
 .error {

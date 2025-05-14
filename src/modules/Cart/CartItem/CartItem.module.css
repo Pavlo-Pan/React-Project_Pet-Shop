@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     width: 780px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid var(--grey-divider);
     border-radius: 12px;
     background-color: #fff;
     padding-right: 32px;
@@ -41,6 +41,6 @@
 .oldPrice {
     font-size: 20px;
     font-weight: 500;
-    color: #6b7280;
+    color: var(--light-text-color);
     text-decoration: line-through;
 }

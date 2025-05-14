@@ -1,6 +1,5 @@
 .wrapper {
     width: 528px;
-    background: #f5f6f7;
     padding: 32px;
     border-radius: 12px;
 }
@@ -15,7 +14,7 @@
 .sub {
     margin: 4px 0 16px;
     font-size: 40px;
-    color: #888888;
+    color: var(--light-text-color);
 }
 
 .total {
@@ -27,13 +26,13 @@
 
 .total-label {
     font-size: 40px;
-    color: #888888;
+    color: var(--light-text-color);
     margin-right: 8px;
 }
 
 .total-value {
     font-size: 64px;
     font-weight: 700;
-    color: #000;
+    color: var(--main-text-color);
     
 }
