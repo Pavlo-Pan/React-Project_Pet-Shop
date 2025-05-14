@@ -69,7 +69,8 @@ const OrdersForm = ({ onOrder }) => {
                     register={register}
                     rules={fld.rules}
                     error={errors[fld.name]}
-                    styles={{ width: "484px", marginBottom: 16, color: "var(--main-text-color)", backgroundColor: "#fff" }}/>))}
+                    placeholderColor='var(--main-text-color)'
+                    styles={{ width: 484, marginBottom: 16, color: '#282828', backgroundColor: "#fff" }}/>))}
             <Btn
                 type="submit"
                 disabled={isSubmitting}
