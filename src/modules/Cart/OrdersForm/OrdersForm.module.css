@@ -1,0 +1,9 @@
+.form{
+    width:484px;
+}
+.successMessage {
+    color: var(--white-color);
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}

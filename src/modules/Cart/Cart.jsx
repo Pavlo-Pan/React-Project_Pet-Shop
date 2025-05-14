@@ -36,7 +36,7 @@ const Cart = () => {
 
     return (
         <FlexLayout>
-            <ul style={{ listStyle: 'none', padding: 0 }}>
+            <ul style={{ listStyle: 'none'}}>
                 {Object.values(items).map(({ product, qty }) => (
                     <li key={product.id}>
                         <CartItem

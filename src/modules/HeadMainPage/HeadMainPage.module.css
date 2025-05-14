@@ -32,7 +32,10 @@
     font-weight: 700;
     margin-bottom: 40px;
 }
+.link{
 
+    width: 290px;
+}
 @media (max-width: 1024px) {
     /* Override styles here for <=1024px */
 }

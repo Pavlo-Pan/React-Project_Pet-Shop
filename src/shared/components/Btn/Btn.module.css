@@ -5,6 +5,7 @@
     background-color: var(--main-background-color);
     padding: 16px 32px;
     border-radius: var(--radius-small);
+    width: 100%;
 }
 
 .btn:hover {

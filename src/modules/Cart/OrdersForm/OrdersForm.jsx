@@ -6,7 +6,7 @@ import Btn from "../../../shared/components/Btn/Btn";
 import { sendCoupon } from "../../../shared/api/api";
 
 import fields from "./fields";
-
+import styles from './OrdersForm.module.css'
 const OrdersForm = ({ onOrder }) => {
     const {
         register,
@@ -44,16 +44,10 @@ const OrdersForm = ({ onOrder }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            {serverError && <div style={{ color: "red", marginBottom: 12 }}>{serverError}</div>}
+        <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+            {serverError && <div style={{ color: "red"}}>{serverError}</div>}
             {successMessage && (
-                <div
-                    style={{
-                        color: "var(--white-color)",
-                        padding: "8px",
-                        borderRadius: 4,
-                        marginBottom: 12,
-                    }}>
+                <div className={styles.successMessage}>
                     {successMessage}
                 </div>
             )}
@@ -68,8 +62,7 @@ const OrdersForm = ({ onOrder }) => {
                     register={register}
                     rules={fld.rules}
                     error={errors[fld.name]}
-                    /* placeholderColor='var(--light-grey)' */
-                    styles={{ width: 484, marginBottom: 20, color: 'var(--main-text-color)', backgroundColor: 'var(--white-color)', }} />))}
+                    styles={{color: 'var(--main-text-color)', backgroundColor: 'var(--white-color)', }} />))}
             <Btn
                 type="submit"
                 disabled={isSubmitting}

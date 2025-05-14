@@ -51,7 +51,7 @@ const ProductDetail = () => {
                     />
                     <div className={styles.counBtn}>
                         <Counter qty={qty} onChange={setQty} />
-                        <Btn width='316px' onClick={handleAdd}>
+                        <Btn onClick={handleAdd}>
                             Add to cart
                         </Btn>
                     </div>

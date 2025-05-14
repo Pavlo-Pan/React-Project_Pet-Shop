@@ -6,7 +6,7 @@
     align-items: center;
     height: 128px;
     justify-content: space-between;
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid var(--grey-divider);
 }
 @media (max-width: 1024px) {
   /* Override styles here for <=1024px */

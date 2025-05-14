@@ -5,7 +5,7 @@ import TextField from "../../../shared/components/TextField/TextField";
 import Btn from "../../../shared/components/Btn/Btn";
 import { sendCoupon } from "../../../shared/api/api";
 import fields from "./fields";
-
+import styles from './RegisterForm.module.css'
 const RegisterForm = () => {
   const {
     register,
@@ -44,17 +44,10 @@ const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      {serverError && <div style={{ color: "red", marginBottom: 12 }}>{serverError}</div>}
+    <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      {serverError && <div style={{ color: "red"}}>{serverError}</div>}
       {successMessage && (
-        <div
-          style={{
-            backgroundColor: "green",
-            color: "var(--white-color)",
-            padding: "8px",
-            borderRadius: 4,
-            marginBottom: 12,
-          }}>
+        <div className={styles.successMessage}>
           {successMessage}
         </div>
       )}
@@ -69,8 +62,8 @@ const RegisterForm = () => {
           register={register}
           rules={fld.rules}
           error={errors[fld.name]}
-          styles={{ width: 516, marginBottom: 16, color: '#282828', }}
-          placeholderColor='#fff'
+          styles={{color: 'var(--main-text-color)'}}
+          placeholderColor='var(--white-color)'
         />
       ))}
 
@@ -78,9 +71,6 @@ const RegisterForm = () => {
         type="submit"
         disabled={isSubmitting}
         style={{
-          width: 516,
-          padding: "12px",
-          marginBottom: 20,
           backgroundColor: "var(--white-color)",
           color: "var(--main-text-color)"
         }}>

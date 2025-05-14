@@ -4,7 +4,7 @@ import styles from './Btn.module.css'
 const Btn = ({
     children,
     type = "button",
-    width = "auto",
+    width = "100%",
     isToggle = false,      
     onToggle,              
     className = '',

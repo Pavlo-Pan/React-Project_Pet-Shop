@@ -18,6 +18,9 @@
   line-height: 130%;
   color: var(--light-text-color);
 }
+.link{
+  width: 250px;
+}
 
 @media (max-width: 1024px) {
   /* Override styles here for <=1024px */

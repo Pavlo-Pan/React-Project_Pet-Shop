@@ -13,7 +13,10 @@ const NotFoundPage = () => {
                 <p className={styles.text}>We’re sorry, the page you requested could not be found.</p>
                 <p className={styles.text}>Please go back to the homepage.</p>
                 <br />
-                <Link to='/'><Btn width='209px'>Go home</Btn></Link>
+                <div className={styles.link}>
+                <Link to='/'><Btn>Go home</Btn></Link>
+                </div>
+
             </div>
         </Container>
     )
