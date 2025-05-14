@@ -6,7 +6,7 @@
 }
 
 .label {
-    font-size: 18px;
+    font-size: var(--big-text);
     width: 100px;
 }
 
@@ -16,7 +16,7 @@
     border: 1px solid var(--white-color);
     outline: none;
     border-radius: var(--radius-small);
-    font-size: 20px;
+    font-size: var(--big-text);
 }
 
 .input::placeholder {
@@ -28,7 +28,7 @@
 .error {
     width: 100%;
     color: red;
-    font-size: 16px;
+    font-size: var(--small-text);
 }
 
 @media (max-width: 1024px) {

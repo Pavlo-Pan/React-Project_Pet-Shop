@@ -6,7 +6,7 @@
 }
 
 .old {
-    font-size: 40px;
+    font-size: var(--small-title);
     font-weight: 500;
     color: var(--light-text-color);
     text-decoration: line-through;
@@ -20,14 +20,14 @@
     color: var(--white-color);
     padding: 6px 12px;
     border-radius: var(--radius-small);
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 600;
     position: relative;
     top: -21px;
 }
 
 .current {
-    font-size: 64px;
+    font-size: var(--big-title);
     font-weight: 700;
     color: var(--main-text-color);
     margin-right: 32px;

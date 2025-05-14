@@ -25,12 +25,12 @@
 }
 
 .title {
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 500;
 }
 
 .price {
-    font-size: 40px;
+    font-size: var(--small-title);
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@
 }
 
 .oldPrice {
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 500;
     color: var(--light-text-color);
     text-decoration: line-through;

@@ -14,7 +14,7 @@
     height: 58px;
     border: 2px solid var(--grey-divider);
     background: none;
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 400;
     color: var(--light-text-color);
     border-radius: var(--radius-small);
@@ -26,7 +26,7 @@
 .value {
     width: 58px;
     text-align: center;
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 600;
     color: var(--main-text-color);
 }

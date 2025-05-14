@@ -10,7 +10,7 @@
 }
 
 .title {
-    font-size: 64px;
+    font-size: var(--big-title);
     color: var(--white-color);
     font-weight: 700;
 }

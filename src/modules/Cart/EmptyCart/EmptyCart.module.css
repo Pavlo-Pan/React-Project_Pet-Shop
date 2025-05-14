@@ -1,14 +1,16 @@
-.text{
-    margin-bottom: 32px;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 130%;
-    color: var(--main-text-color);
+.text {
+  margin-bottom: 32px;
+  font-size: var(--big-text);
+  font-weight: 500;
+  line-height: 130%;
+  color: var(--main-text-color);
 }
-.cont{
-    gap: 32px;
-    margin: 40px 0 0 0;
+
+.cont {
+  gap: 32px;
+  margin: 40px 0 0 0;
 }
+
 @media (max-width: 1024px) {
   /* Override styles here for <=1024px */
 }

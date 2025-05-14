@@ -6,7 +6,7 @@
 }
 
 .label {
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 600;
     margin-right: 16px;
     color: var(--main-text-color);
@@ -18,7 +18,7 @@
     border: 1px solid var(--grey-divider);
     outline: none;
     border-radius: var(--radius-small);
-    font-size: 16px;
+    font-size: var(--small-text);
     font-family: 'Montserrat';
     font-weight: 500;
     margin-bottom: 5px;
@@ -31,7 +31,7 @@
 .error {
     width: 100%;
     color: red;
-    font-size: 16px;
+    font-size: var(--small-text);
 }
 
 @media (max-width: 1024px) {

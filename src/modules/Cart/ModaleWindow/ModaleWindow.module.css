@@ -31,13 +31,13 @@
 }
 
 .title {
-    font-size: 40px;
+    font-size: var(--small-title);
     font-weight: 600;
 }
 
 .content {
     width: 424px;
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 500;
     margin-bottom: 16px;
 }

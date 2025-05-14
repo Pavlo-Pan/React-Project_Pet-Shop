@@ -1,6 +1,6 @@
 .btn {
     color: var(--white-color);
-    font-size: 20px;
+    font-size: var(--big-text);
     font-weight: 600;
     background-color: var(--main-background-color);
     padding: 16px 32px;

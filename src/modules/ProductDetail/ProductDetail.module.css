@@ -1,29 +1,30 @@
 .wrapper {
-    display: flex;
-    gap: 40px;
-    padding: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
 }
 
 .details {
-    flex: 1;
-    max-width: 574px;
-    display: flex;
-    flex-direction: column;
+  flex: 1;
+  max-width: 574px;
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
-    font-size: 40px;
-    font-weight: 700;
-    margin-bottom: 32px;
-    color: var(--main-text-color);
+  font-size: var(--small-title);
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--main-text-color);
 }
 
-.counBtn{
-    display: flex;
-    justify-content: space-between;
-    margin: 32px 0;
+.counBtn {
+  display: flex;
+  justify-content: space-between;
+  margin: 32px 0;
 }
+
 @media (max-width: 1024px) {
   /* Override styles here for <=1024px */
 }

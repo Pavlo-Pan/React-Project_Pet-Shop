@@ -8,14 +8,14 @@
 
 .title {
     margin: 0 0 24px 0;
-    font-size: 40px;
+    font-size: var(--small-title);
     font-weight: 700;
     color: var(--main-text-color);
 }
 
 .sub {
     margin: 4px 0 16px;
-    font-size: 40px;
+    font-size: var(--small-title);
     color: var(--light-text-color);
 }
 
@@ -27,13 +27,13 @@
 }
 
 .total-label {
-    font-size: 40px;
+    font-size: var(--small-title);
     color: var(--light-text-color);
     margin-right: 8px;
 }
 
 .total-value {
-    font-size: 64px;
+    font-size: var(--big-title);
     font-weight: 700;
     color: var(--main-text-color);
 

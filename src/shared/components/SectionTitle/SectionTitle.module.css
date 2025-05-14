@@ -1,46 +1,47 @@
 .flex {
-    display: flex;
-    min-width: 1300px;
-    width: 1400px;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  min-width: 1300px;
+  width: 1400px;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .title {
-    font-size: 64px;
-    font-weight: 700;
-    color: var(--main-text-color);
-    flex: 0 0 auto;
+  font-size: var(--big-title);
+  font-weight: 700;
+  color: var(--main-text-color);
+  flex: 0 0 auto;
 }
 
 .hrContainer {
-    flex: 1;
-    margin: 0 0 0 30px;
+  flex: 1;
+  margin: 0 0 0 30px;
 }
 
 .hr {
-    max-width: 100%;
-    border: none;
-    border-top: 1px solid var(--grey-divider);
-    pointer-events: none;
+  max-width: 100%;
+  border: none;
+  border-top: 1px solid var(--grey-divider);
+  pointer-events: none;
 }
 
 .link {
-    position: relative;
-    flex: 0 0 auto;
-    height: 26px;
-    border: 1px solid var(--grey-divider);
-    display: flex;
-    padding: 4px;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--light-text-color);
-    z-index: 1;
-    pointer-events: auto;
-    cursor: pointer ;
+  position: relative;
+  flex: 0 0 auto;
+  height: 26px;
+  border: 1px solid var(--grey-divider);
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  font-size: var(--small-text);
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--light-text-color);
+  z-index: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
+
 @media (max-width: 1024px) {
   /* Override styles here for <=1024px */
 }
