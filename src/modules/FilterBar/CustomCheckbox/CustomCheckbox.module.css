@@ -23,8 +23,8 @@
     width: 36px;
     height: 36px;
     border: 1px solid var(--grey-divider);
-    border-radius: 6px;
-    background-color: #FFFFFF;
+    border-radius: var(--radius-small);
+    background-color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,6 +37,27 @@
     position: relative;
     z-index: 1;
 }
-.check{
+
+.check {
     z-index: 5;
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

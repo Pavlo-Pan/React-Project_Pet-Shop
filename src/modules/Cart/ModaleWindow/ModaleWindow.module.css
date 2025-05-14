@@ -13,8 +13,8 @@
 
 .modal {
     background: var(--main-background-color);
-    color: #fff;
-    border-radius: 8px;
+    color: var(--white-color);
+    border-radius: var(--radius-small);
     max-width: 500px;
     padding: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -40,4 +40,24 @@
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 16px;
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

@@ -9,14 +9,14 @@ const MainLogo = ({ width = 70, height = 70, ...props }) => (
     >
         <circle cx={35} cy={35} r={35} fill="#0D50FF" />
         <path
-            stroke="#fff"
+            stroke="var(--white-color)"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={4.111}
             d="M33.445 21.056h4.11M49.89 35.445c-1.37 10.963-4.796 16.444-10.278 16.444H31.39c-5.481 0-8.907-5.481-10.278-16.444"
         />
         <path
-            stroke="#fff"
+            stroke="var(--white-color)"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth={4.111}

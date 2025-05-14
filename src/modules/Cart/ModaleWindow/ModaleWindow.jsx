@@ -7,10 +7,10 @@ const ModaleWindow = ({ isOpen, onClose }) => {
             <div className={styles.modal}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Congratulations!</h2>
-                    <CrossButton onClick={onClose} color='#fff' width='22px' height='22px'/>
+                    <CrossButton onClick={onClose} color='var(--white-color)' width='22px' height='22px' />
                 </div>
                 <div ><p className={styles.content}>Your order has been successfully placed on the website. </p>
-                <p className={styles.content}>A manager will contact you shortly to confirm your order.</p></div>
+                    <p className={styles.content}>A manager will contact you shortly to confirm your order.</p></div>
             </div>
         </div>
     )

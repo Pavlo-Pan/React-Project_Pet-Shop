@@ -13,14 +13,14 @@
 .input {
     background-color: var(--main-background-color);
     padding: 16px 32px;
-    border: 1px solid #fff;
+    border: 1px solid var(--white-color);
     outline: none;
-    border-radius: 6px;
+    border-radius: var(--radius-small);
     font-size: 20px;
 }
 
 .input::placeholder {
-    color: var(--placeholder-color);
+    color: var(--placeholder-font-color, var(--light-text-color));
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
 }
@@ -29,4 +29,24 @@
     width: 100%;
     color: red;
     font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

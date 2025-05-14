@@ -4,7 +4,7 @@
     gap: 12px;
     border: 2px solid var(--grey-divider);
     margin-right: 32px;
-    border-radius: 4px;
+    border-radius: var(--radius-small);
     border-right: none;
     border-left: none;
 }
@@ -17,7 +17,7 @@
     font-size: 20px;
     font-weight: 400;
     color: var(--light-text-color);
-    border-radius: 6px;
+    border-radius: var(--radius-small);
     cursor: pointer;
     border-top: none;
     border-bottom: none;
@@ -29,4 +29,24 @@
     font-size: 20px;
     font-weight: 600;
     color: var(--main-text-color);
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

@@ -1,10 +1,10 @@
 .btn {
-    color: #FFF;
+    color: var(--white-color);
     font-size: 20px;
     font-weight: 600;
     background-color: var(--main-background-color);
     padding: 16px 32px;
-    border-radius: 6px;
+    border-radius: var(--radius-small);
 }
 
 .btn:hover {
@@ -14,8 +14,29 @@
 .active {
     color: var(--main-text-color);
     border: 1px solid var(--secondary-background-color);
-    background-color: #fff;
+    background-color: var(--white-color);
 }
-.active:hover{
-    color: #FFF;
+
+.active:hover {
+    color: var(--white-color);
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

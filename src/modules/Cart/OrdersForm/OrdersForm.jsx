@@ -49,8 +49,7 @@ const OrdersForm = ({ onOrder }) => {
             {successMessage && (
                 <div
                     style={{
-                        backgroundColor: "green",
-                        color: "#fff",
+                        color: "var(--white-color)",
                         padding: "8px",
                         borderRadius: 4,
                         marginBottom: 12,
@@ -69,13 +68,13 @@ const OrdersForm = ({ onOrder }) => {
                     register={register}
                     rules={fld.rules}
                     error={errors[fld.name]}
-                    placeholderColor='var(--light-text-color)'
-                    styles={{ width: 484, marginBottom: 16, color: '#282828', backgroundColor: "#fff" }}/>))}
+                    /* placeholderColor='var(--light-grey)' */
+                    styles={{ width: 484, marginBottom: 20, color: 'var(--main-text-color)', backgroundColor: 'var(--white-color)', }} />))}
             <Btn
                 type="submit"
                 disabled={isSubmitting}
                 style={{
-                    margin: "16px 0 32px 0",
+                    margin: "20px 0 40px 0",
                     width: "484px",
                 }}>
                 {isSubmitting ? "Send..." : "Order"}

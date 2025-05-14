@@ -17,8 +17,8 @@
     width: 200px;
     padding: 8px 32px 8px 12px;
     border: 1px solid var(--grey-divider);
-    border-radius: 6px;
-    background-color: #FFFFFF;
+    border-radius: var(--radius-small);
+    background-color: var(--white-color);
     cursor: pointer;
     font-size: 16px;
     font-family: 'Montserrat';
@@ -33,4 +33,24 @@
     pointer-events: none;
     font-size: 12px;
     color: var(--light-text-color);
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

@@ -50,7 +50,7 @@ const RegisterForm = () => {
         <div
           style={{
             backgroundColor: "green",
-            color: "#fff",
+            color: "var(--white-color)",
             padding: "8px",
             borderRadius: 4,
             marginBottom: 12,
@@ -69,7 +69,8 @@ const RegisterForm = () => {
           register={register}
           rules={fld.rules}
           error={errors[fld.name]}
-          styles={{ width: 516, marginBottom: 16 }}
+          styles={{ width: 516, marginBottom: 16, color: '#282828', }}
+          placeholderColor='#fff'
         />
       ))}
 
@@ -79,9 +80,9 @@ const RegisterForm = () => {
         style={{
           width: 516,
           padding: "12px",
-          marginBottom: 16,
-          backgroundColor: "#fff",
-          color: "var(--main-text-color)",
+          marginBottom: 20,
+          backgroundColor: "var(--white-color)",
+          color: "var(--main-text-color)"
         }}>
         {isSubmitting ? "Send..." : "Get a discount"}
       </Btn>

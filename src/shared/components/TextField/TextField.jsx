@@ -17,7 +17,7 @@ const TextField = ({
     const styleWithPlaceholder = {
         ...inputStyles,
         ...(placeholderColor
-            ? { '--placeholder-color': placeholderColor }
+            ? { '--placeholder-font-color': placeholderColor }
             : {}),
     };
 

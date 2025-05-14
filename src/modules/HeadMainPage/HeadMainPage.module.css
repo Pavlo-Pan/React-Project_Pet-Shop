@@ -21,13 +21,34 @@
     z-index: -1;
 }
 
-.inner{
+.inner {
     margin: 80px auto auto 40px;
 }
-.title{
-    color: #fff;
+
+.title {
+    color: var(--white-color);
     font-size: 96px;
     line-height: 110px;
     font-weight: 700;
     margin-bottom: 40px;
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }

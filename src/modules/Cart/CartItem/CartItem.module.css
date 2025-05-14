@@ -1,11 +1,10 @@
-
 .card {
     display: flex;
     align-items: center;
     width: 780px;
     border: 1px solid var(--grey-divider);
-    border-radius: 12px;
-    background-color: #fff;
+    border-radius: var(--radius-big);
+    background-color: var(--white-color);
     padding-right: 32px;
     margin-bottom: 16px;
 }
@@ -14,7 +13,7 @@
     width: 200px;
     height: 180px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: var(--radius-big);
     margin-right: 32px;
 }
 
@@ -43,4 +42,24 @@
     font-weight: 500;
     color: var(--light-text-color);
     text-decoration: line-through;
+}
+
+@media (max-width: 1024px) {
+    /* Override styles here for <=1024px */
+}
+
+@media (max-width: 768px) {
+    /* Override styles here for <=768px */
+}
+
+@media (max-width: 425px) {
+    /* Override styles here for <=425px */
+}
+
+@media (max-width: 375px) {
+    /* Override styles here for <=375px */
+}
+
+@media (max-width: 320px) {
+    /* Override styles here for <=320px */
 }
