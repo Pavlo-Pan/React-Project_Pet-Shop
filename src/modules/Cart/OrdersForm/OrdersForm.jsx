@@ -45,38 +45,31 @@ const OrdersForm = ({ onOrder }) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            {serverError && <div style={{ color: "red" }}>{serverError}</div>}
-            {successMessage && <div style={{ color: "var(--main-text-color)" }}>{successMessage}</div>}
-            <TextField
-                placeholderColor="var(--light-text-color)"
-                {...fields.username}
-                register={register}
-                error={errors.username}
-                styles={{
-                    width: "484px",
-                    color: "var(--main-text-color)",
-                    backgroundColor: "#fff",
-                }} />
-            <TextField
-                placeholderColor="var(--light-text-color)"
-                {...fields.phone}
-                register={register}
-                error={errors.phone}
-                styles={{
-                    width: "484px",
-                    color: "var(--main-text-color)",
-                    backgroundColor: "#fff",
-                }} />
-            <TextField
-                placeholderColor="var(--light-text-color)"
-                {...fields.email}
-                register={register}
-                error={errors.email}
-                styles={{
-                    width: "484px",
-                    color: "var(--main-text-color)",
-                    backgroundColor: "#fff",
-                }} />
+            {serverError && <div style={{ color: "red", marginBottom: 12 }}>{serverError}</div>}
+            {successMessage && (
+                <div
+                    style={{
+                        backgroundColor: "green",
+                        color: "#fff",
+                        padding: "8px",
+                        borderRadius: 4,
+                        marginBottom: 12,
+                    }}>
+                    {successMessage}
+                </div>
+            )}
+
+            {Object.values(fields).map((fld) => (
+                <TextField
+                    key={fld.name}
+                    label={fld.label}
+                    name={fld.name}
+                    as={fld.as}
+                    placeholder={fld.placeholder}
+                    register={register}
+                    rules={fld.rules}
+                    error={errors[fld.name]}
+                    styles={{ width: "484px", marginBottom: 16, color: "var(--main-text-color)", backgroundColor: "#fff" }}/>))}
             <Btn
                 type="submit"
                 disabled={isSubmitting}
