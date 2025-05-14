@@ -22,6 +22,7 @@
 .input::placeholder {
     color: var(--placeholder-color);
     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
 }
 
 .error {

@@ -79,7 +79,7 @@ const RegisterForm = () => {
         style={{
           width: 516,
           padding: "12px",
-          marginTop: 16,
+          marginBottom: 16,
           backgroundColor: "#fff",
           color: "var(--main-text-color)",
         }}>

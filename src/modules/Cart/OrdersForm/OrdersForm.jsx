@@ -69,7 +69,7 @@ const OrdersForm = ({ onOrder }) => {
                     register={register}
                     rules={fld.rules}
                     error={errors[fld.name]}
-                    placeholderColor='var(--main-text-color)'
+                    placeholderColor='var(--light-text-color)'
                     styles={{ width: 484, marginBottom: 16, color: '#282828', backgroundColor: "#fff" }}/>))}
             <Btn
                 type="submit"
