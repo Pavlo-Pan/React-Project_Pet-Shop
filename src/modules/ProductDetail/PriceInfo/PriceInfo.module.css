@@ -33,20 +33,20 @@
     margin-right: 32px;
 }
 
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+@media (max-width: 1025px) {
+    /* Override styles here for <=1025px */
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
+@media (max-width: 769px) {
+    /* Override styles here for <=769px */
 }
 
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
+@media (max-width: 426px) {
+    /* Override styles here for <=426px */
 }
 
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
+@media (max-width: 376px) {
+    /* Override styles here for <=376px */
 }
 
 @media (max-width: 320px) {

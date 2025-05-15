@@ -22,22 +22,10 @@
     color: var(--white-color);
 }
 
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+@media (max-width: 1025px) {
+.btn {padding: 16px;}
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
-}
-
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
-}
-
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-    /* Override styles here for <=320px */
+@media (max-width: 769px) {
+.btn {padding: 8px;}
 }

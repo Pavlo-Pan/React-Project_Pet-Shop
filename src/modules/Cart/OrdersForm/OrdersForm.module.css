@@ -1,9 +1,37 @@
-.form{
-    width:484px;
+.form {
+    width: 484px;
 }
+
 .successMessage {
     color: var(--white-color);
     padding: 8px;
     border-radius: 4px;
     margin-bottom: 12px;
+    max-width: 100%;
+}
+
+@media (max-width: 1025px) {
+    .successMessage {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 769px) {
+    .successMessage {
+        padding: 4px;
+        margin-bottom: 6px;
+    }
+}
+
+@media (max-width: 426px) {
+    .form {
+        width: 410px;
+    }
+}
+
+@media (max-width: 376px) {
+    .form {
+        width: 360px;
+    }
 }

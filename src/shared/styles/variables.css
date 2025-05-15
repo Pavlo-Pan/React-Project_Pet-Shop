@@ -8,8 +8,45 @@
     --radius-small: 6px;
     --white-color: #fff;
     --grey-divider: #DDDDDD;
+
     --small-text: 16px;
     --big-text: 20px;
     --small-title: 40px;
     --big-title: 64px;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --small-text: 15px;
+        --big-text: 18px;
+        --small-title: 30px;
+        --big-title: 46px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --small-text: 14px;
+        --big-text: 16px;
+        --small-title: 20px;
+        --big-title: 28px;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        --small-text: 13px;
+        --big-text: 15px;
+        --small-title: 18px;
+        --big-title: 22px;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        --small-text: 12px;
+        --big-text: 14px;
+        --small-title: 16px;
+        --big-title: 20;
+    }
 }

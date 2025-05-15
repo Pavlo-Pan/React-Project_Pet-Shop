@@ -32,26 +32,29 @@
     font-weight: 700;
     margin-bottom: 40px;
 }
-.link{
+
+.link {
 
     width: 290px;
 }
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+
+@media (max-width: 1025px) {
+    .title {
+        font-size: 60px;
+        line-height: 65px;
+    }
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
+@media (max-width: 769px) {
+    .title {
+        font-size: 30px;
+        line-height: 33px;
+        margin-bottom: 10px;
+    }
 }
 
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
-}
-
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-    /* Override styles here for <=320px */
+@media (max-width: 426px) {
+    .container {
+        display: none;
+    }
 }

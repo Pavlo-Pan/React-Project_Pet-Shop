@@ -1,6 +1,5 @@
 .flex {
   display: flex;
-  min-width: 1300px;
   width: 1400px;
   align-items: center;
   margin-top: 40px;
@@ -42,22 +41,60 @@
   cursor: pointer;
 }
 
-@media (max-width: 1024px) {
-  /* Override styles here for <=1024px */
+@media (max-width: 1025px) {
+  .flex {
+  width: 970px;
+  margin-top: 30px;
+}
+.hrContainer {
+  margin: 0 0 0 20px;
+}
+.hrContainer {
+  margin: 0 0 0 30px;
+}
 }
 
-@media (max-width: 768px) {
-  /* Override styles here for <=768px */
+@media (max-width: 769px) {
+  .flex {
+  width: 719px;
+  margin-top: 20px;
+}
+.hrContainer {
+  margin: 0 0 0 10px;
+}
+.hrContainer {
+  margin: 0 0 0 20px;
+}
 }
 
-@media (max-width: 425px) {
-  /* Override styles here for <=425px */
+@media (max-width: 426px) {
+  .flex {
+  width: 370px;
+  margin-top: 20px;
+}
+.hrContainer {
+  margin: 0 0 0 10px;
+}
+.hrContainer {
+  margin: 0 0 0 20px;
+}
 }
 
-@media (max-width: 375px) {
-  /* Override styles here for <=375px */
+@media (max-width: 376px) {
+  .flex {
+  width: 350px;
+  margin-top: 10px;
+}
+.hrContainer {
+  margin: 0 0 0 5px;
+}
+.hrContainer {
+  margin: 0 0 0 10px;
+}
 }
 
 @media (max-width: 320px) {
-  /* Override styles here for <=320px */
+  .flex {
+  width: 280px;
+}
 }

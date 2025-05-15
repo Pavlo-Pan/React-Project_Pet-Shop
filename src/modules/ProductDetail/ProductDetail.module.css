@@ -25,22 +25,25 @@
   margin: 32px 0;
 }
 
-@media (max-width: 1024px) {
-  /* Override styles here for <=1024px */
+@media (max-width: 1025px) {
+  .wrapper {
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 768px) {
-  /* Override styles here for <=768px */
-}
+@media (max-width: 769px) {
+  .wrapper {
+    gap: 5px;
+    padding: 5px;
 
-@media (max-width: 425px) {
-  /* Override styles here for <=425px */
-}
+  }
 
-@media (max-width: 375px) {
-  /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-  /* Override styles here for <=320px */
+  .counBtn {
+    margin: 8px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
 }

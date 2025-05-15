@@ -39,22 +39,18 @@
 
 }
 
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+@media (max-width: 769px) {
+    .total {
+    margin-bottom: 8px;
+}
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
+@media (max-width: 426px) {
+    .wrapper {
+    width: 100%;
+    padding: 8px;
 }
-
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
+.title {
+    margin: 0 0 6px 0;
 }
-
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-    /* Override styles here for <=320px */
 }

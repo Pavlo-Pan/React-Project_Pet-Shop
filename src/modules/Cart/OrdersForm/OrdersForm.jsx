@@ -65,11 +65,7 @@ const OrdersForm = ({ onOrder }) => {
                     styles={{color: 'var(--main-text-color)', backgroundColor: 'var(--white-color)', }} />))}
             <Btn
                 type="submit"
-                disabled={isSubmitting}
-                style={{
-                    margin: "20px 0 40px 0",
-                    width: "484px",
-                }}>
+                disabled={isSubmitting}>
                 {isSubmitting ? "Send..." : "Order"}
             </Btn>
         </form>

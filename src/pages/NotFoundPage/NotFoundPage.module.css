@@ -18,26 +18,25 @@
   line-height: 130%;
   color: var(--light-text-color);
 }
-.link{
+
+.link {
   width: 250px;
 }
 
-@media (max-width: 1024px) {
-  /* Override styles here for <=1024px */
+@media (max-width: 1025px) {
+  .flex {
+  margin: 40px 0;}
 }
 
-@media (max-width: 768px) {
-  /* Override styles here for <=768px */
+@media (max-width: 769px) {
+  .flex {
+  margin: 20px 0;}
 }
 
-@media (max-width: 425px) {
-  /* Override styles here for <=425px */
-}
-
-@media (max-width: 375px) {
-  /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-  /* Override styles here for <=320px */
+@media (max-width: 426px) {
+  .flex {
+  margin: 10px 0;}
+  .flex img{
+    display: none;
+  }
 }

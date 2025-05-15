@@ -32,22 +32,29 @@
     border-radius: var(--radius-small);
 }
 
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+@media (max-width: 769px) {
+    .thumb {
+        display: none;
+    }
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
+@media (max-width: 426px) {
+    .mainImage {
+        width: 410px;
+        height: auto;
+    }
 }
 
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
-}
+@media (max-width: 376px) {
+    .mainImage {
+        width: 350px;
 
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
+    }
 }
 
 @media (max-width: 320px) {
-    /* Override styles here for <=320px */
+    .mainImage {
+        width: 300px;
+
+    }
 }

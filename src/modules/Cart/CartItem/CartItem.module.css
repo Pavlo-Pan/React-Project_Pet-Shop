@@ -44,22 +44,48 @@
     text-decoration: line-through;
 }
 
-@media (max-width: 1024px) {
-    /* Override styles here for <=1024px */
+
+@media (max-width: 769px) {
+    .card {
+        width: 765px;
+        padding-right: 12px;
+        margin-bottom: 8px;
+    }
+
+    .info {
+        margin-bottom: 8px;
+
+    }
 }
 
-@media (max-width: 768px) {
-    /* Override styles here for <=768px */
+@media (max-width: 426px) {
+    .card {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        width: 100%;
+        margin-bottom: 4px;
+        position: relative;
+    }
+
+    .info button {
+        position: absolute;
+        top: -360px;
+        right: -80px;
+        z-index: 15;
+    }
 }
 
-@media (max-width: 425px) {
-    /* Override styles here for <=425px */
-}
-
-@media (max-width: 375px) {
-    /* Override styles here for <=375px */
-}
-
-@media (max-width: 320px) {
-    /* Override styles here for <=320px */
+@media (max-width: 376px) {
+    .info button {
+        top: -310px;
+        right: -45px;
+    }
 }

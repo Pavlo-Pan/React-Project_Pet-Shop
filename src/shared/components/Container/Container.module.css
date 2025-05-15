@@ -1,23 +1,39 @@
-.container{
-    max-width: 1440px;
-    padding: 0 40px 80px 40px;
-}
-@media (max-width: 1024px) {
-  /* Override styles here for <=1024px */
+.container {
+  max-width: 1440px;
+  padding: 0 40px 80px 40px;
 }
 
-@media (max-width: 768px) {
-  /* Override styles here for <=768px */
+@media (max-width: 1025px) {
+  .container {
+    max-width: 1025px;
+    padding: 0 30px 60px 30px;
+  }
 }
 
-@media (max-width: 425px) {
-  /* Override styles here for <=425px */
+@media (max-width: 769px) {
+  .container {
+    max-width: 769px;
+    padding: 0 20px 40px 20px;
+  }
 }
 
-@media (max-width: 375px) {
-  /* Override styles here for <=375px */
+@media (max-width: 426px) {
+  .container {
+    max-width: 426px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 376px) {
+  .container {
+    max-width: 376px;
+    padding: 0;
+  }
 }
 
 @media (max-width: 320px) {
-  /* Override styles here for <=320px */
+  .container {
+    max-width: 320px;
+    padding: 0;
+  }
 }
