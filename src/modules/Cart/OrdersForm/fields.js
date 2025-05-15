@@ -15,10 +15,6 @@ const fields = {
         name: "phone",
         rules: {
             required: "Phone must be exist",
-            minLength: {
-                value: 1,
-                message: "Phone must contain al least 11 symbols"
-            }
         }
     },
     email: {
