@@ -4,6 +4,7 @@ import { fetchProducts } from '../../shared/store/productsSlice';
 import ProductCard from '../../shared/components/ProductCard.jsx/ProductCard';
 import FlexLayout from '../layouts/FlexLayout/FlexLayout';
 import { getFinalPrice } from '../../shared/utils/mathFunc';
+import SkeletonCard from '../../shared/components/SkeletonCard/SkeletonCard';
 import { API_URL } from '../../shared/config/config';
 const ProductsSector = ({
   limit,
@@ -28,7 +29,18 @@ const ProductsSector = ({
   }, [dispatch, status]);
 
   if (status === 'idle' || status === 'loading') {
-    return <p>Loading products…</p>;
+    return (
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: '16px',
+        padding: '16px',
+      }}>
+        {Array.from({ length: 4 }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </div>
+    );
   }
   if (status === 'failed') {
     return <p style={{ color: 'red' }}>Error: {error}</p>;

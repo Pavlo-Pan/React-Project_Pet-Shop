@@ -110,18 +110,54 @@ cd <имя_папки_проекта>
 После создания проекта с помощью Create React App (CRA), структура frontend части выглядит следующим образом:
 
 ```
-frontend/
-├── public/                 # Статичные файлы (index.html, favicon и т.д.)
-├── src/                    # Исходный код приложения
-│   ├── components/         # Переиспользуемые UI‑компоненты (кнопки, карточки, формы)
-│   ├── pages/              # Компоненты‑страницы (MainPage, CategoriesPage, ProductPage и т.д.)
-│   └── layouts/            # Общие макеты (Header, Footer и обёртка макета)
-│   
-├── package.json            # Манифест npm‑пакета
-├── .gitignore              # Исключения для Git
-└── README.md               # Документация для frontend
-```
 
+/
+├─ .env
+├─ .gitignore
+├─ eslint.config.js
+├─ index.html
+├─ package.json
+├─ vite.config.js
+├─ README.md
+├─ public/              # Статичные файлы (index.html, favicon и т.д.)
+│  └─ logo.svg
+└─ src/                 # Исходный код приложения
+   ├─ main.jsx
+   ├─ shared/           # Переиспользуемые UI‑компоненты (кнопки, карточки, формы)
+   │  ├─ api/
+   │  │  └─ api.js
+   │  ├─ config/
+   │  │  └─ config.js
+   │  ├─ store/
+   │  │  ├─ store.js
+   │  │  ├─ productsSlice.js
+   │  │  ├─ cartSlice.js
+   │  │  └─ categorieSlice.js
+   │  ├─ hooks/
+   │  │  ├─ useFilters.js
+   │  │  └─ useMediaQuery.js
+   │  ├─ utils/
+   │  │  └─ mathFunc.js
+   │  ├─components/...
+   │  │
+   │  └─ styles/                       # Общие макеты стилей
+   │     ├─ reset.css
+   │     ├─ variables.css
+   │     ├─ common.css
+   │     ├─ fonts.css
+   │     └─ style.css
+   ├─ modules/                          # Общие макеты (Header, Footer и обёртка макета)   
+   │  └─ Layout/… (Header, Footer)
+   ├─ pages/                           # Компоненты‑страницы (MainPage, CategoriesPage, ProductPage и т.д.)
+   │  ├─ HomePage/
+   │  ├─ AllProductsPage/
+   │  ├─ CategoryDetailPage/
+   │  ├─ CartPage/
+   │  └─ … 
+   └─ assets/
+      └─ icons/…
+      
+```
 **Удаление ненужных файлов после CRA**:
 
 * `src/App.test.js`
