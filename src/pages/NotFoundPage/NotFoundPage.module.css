@@ -5,6 +5,14 @@
   align-items: center;
 }
 
+.img {
+  width: 690px;
+  height: 270px;
+  background-image: url(../../assets/images/404.png);
+  background-size: cover;
+  background-position: center;
+}
+
 .title {
   font-size: var(--big-title);
   font-weight: 700;
@@ -25,18 +33,22 @@
 
 @media (max-width: 1025px) {
   .flex {
-  margin: 40px 0;}
+    margin: 40px 0;
+  }
 }
 
 @media (max-width: 769px) {
   .flex {
-  margin: 20px 0;}
+    margin: 20px 0;
+  }
 }
 
 @media (max-width: 426px) {
   .flex {
-  margin: 10px 0;}
-  .flex img{
+    margin: 10px 0;
+  }
+
+  .img {
     display: none;
   }
 }

@@ -16,7 +16,12 @@
 }
 
 .img {
+    background-image: url(../../assets/images/fotoRegForm.png);
     height: 360px;
+    width: 650px;
+    z-index: 50;
+    background-size: cover;
+    background-position: center;
 }
 
 .flex {
@@ -41,12 +46,13 @@
 }
 
 @media (max-width: 426px) {
-    .container{
+    .container {
         padding: 5px;
         border-radius: 0;
     }
-    .img{
+
+    .img {
         display: none;
     }
-    
+
 }
